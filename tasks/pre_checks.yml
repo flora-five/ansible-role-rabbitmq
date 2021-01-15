@@ -48,6 +48,8 @@
     - rabbitmq_exchanges_to_delete
     - rabbitmq_policies_to_create
     - rabbitmq_policies_to_delete
+    - rabbitmq_parameters_to_create
+    - rabbitmq_parameters_to_delete
     - rabbitmq_hide_log
 
 - name: "[RabbitMQ] Test that variables are not empty"
