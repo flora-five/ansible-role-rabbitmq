@@ -15,8 +15,10 @@
 
 - name: "[RabbitMQ] Delete unwanted parameters"
   rabbitmq_parameter:
-    component: "{{ item.name | default(omit) }}"
-    name: "{{ item.vhost | default(omit) }}"
+    component: "{{ item.component }}"
+    name: "{{ item.name }}"
+    node: "{{ item.node | default(omit) }}"
+    vhost: "{{ item.vhost | default(omit)  }}"
     state: absent
   with_items:
     - "{{ rabbitmq_parameters_to_delete }}"
