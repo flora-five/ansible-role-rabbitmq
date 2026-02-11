@@ -12,8 +12,8 @@ rabbitmq_rpm_repo_tpl: etc/yum.repos.d/rabbitmq.repo.j2
 rabbitmq_rpm_disable_repo:
 rabbitmq_rpm_enable_repo:
 
-rabbitmq_deb_repo_url: https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/deb
-rabbitmq_deb_gpg_url: https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/gpg.9F4587F226208342.key
+rabbitmq_deb_repo_url: https://deb1.rabbitmq.com/rabbitmq-server
+rabbitmq_deb_gpg_url: https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA
 rabbitmq_deb_repo_tpl: etc/apt/sources.list.d/rabbitmq.list.j2
 rabbitmq_deb_pinning_tpl: etc/apt/preferences.d/rabbitmq.j2
 

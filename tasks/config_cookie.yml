@@ -33,7 +33,7 @@
 - name: "[RabbitMQ] Get cookie from master nodes"
   slurp:
     src: /var/lib/rabbitmq/.erlang.cookie
-  delegate_to: "{{ rabbitmq_slave_of | d('') }}"
+  delegate_to: "{{ groups['rabbitmq_master'] | first | default('') }}"
   register: rabbitmq_cookie
   changed_when: false
   when:
